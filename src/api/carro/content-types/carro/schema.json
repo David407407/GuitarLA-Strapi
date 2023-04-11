@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carros",
+  "info": {
+    "singularName": "carro",
+    "pluralName": "carros",
+    "displayName": "Carros"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "caracteristicas": {
+      "type": "richtext",
+      "required": true
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "titulo",
+      "required": true
+    },
+    "imagen": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
